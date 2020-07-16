@@ -8,7 +8,7 @@ class ProxyFactory {
 
                     return function () {
 
-                        console.log(`a propriedade ${prop} foi interceptada`);
+                        //console.log(`a propriedade ${prop} foi interceptada`);
                         Reflect.apply(target[prop], target, arguments);
                         return acao(target);
                     }
@@ -32,6 +32,6 @@ class ProxyFactory {
 
     static _ehFuncao(func) {
 
-        return typeof(func) == typeof(Function);
+        return typeof (func) == typeof (Function);
     }
 }
